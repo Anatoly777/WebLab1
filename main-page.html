@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<?php
+
+session_start();
+
+if (!isset($_SESSION['requests']) || !is_array($_SESSION['requests'])) {
+    $_SESSION['requests'] = [];
+}
+?>
+<html lang="en">
+   <head>
+		<meta charset="utf-8">
+        <title>Lab #1</title>
+		<link rel="stylesheet" type="text/css" href="theme/style.css">
+	</head>
+
+	<body>
+		<div id="shapka" class="nasimnaya_knopka">
+		<button onclick="window.location.href = 'https://github.com/Anatoly777';" class="stylistics_knopkam maiden-9"><p>Лаптев Анатолий Аллександрович P3213</p></button>
+		<button onclick="window.location.href = 'https://se.ifmo.ru/courses/web';" class="stylistics_knopkam maiden-9"><p> Лабораторная работа №1 ::: Вариант: 13114 </p></button>
+		</div>
+		<div id="container">
+			<div id="menu"><canvas width="600" height="500" id="canvas"></script></canvas></div>
+			<div id="content">
+			<form>
+			<label for="xcoord"><p1>Координата X</p1></label>
+			<input type="text" name="X_coordinate" id="xcoord"><br>
+
+
+
+			<label for="ycoord"><p1>Координата Y</p1></label>
+			<select id="ycoord">
+			  <option value="">не выбрано</option>
+			  <option value="-2">-2</option>
+			  <option value="-1.5">-1.5</option>
+			  <option value="-1">-1</option>
+			  <option value="-0.5">-0.5</option>
+			  <option value="0">0</option>
+			  <option value="0.5">0.5</option>
+			  <option value="1">1</option>
+			  <option value="1.5">1.5</option>
+			  <option value="2">2</option>
+			</select><br>
+
+
+
+			<label for="rad"><p1>Радиус R</p1></label><br>
+			<input type="checkbox" id="rad" name="rad" value="1"><p1> 1 </p1>
+			<input type="checkbox" name="rad" value="2"><p1> 2 </p1>
+			<input type="checkbox" name="rad" value="3"><p1> 3 </p1>
+			<input type="checkbox" name="rad" value="4"><p1> 4 </p1>
+			<input type="checkbox" name="rad" value="5"><p1> 5 </p1>
+			<br><br>
+			<div class="nasimnaya_knopka">
+				<script src="script/main.js"></script>
+                <button type="button" class="stylistics_knopkam maiden-1" onclick="funk()">Отправить Все</button><br>
+			</div>
+			</form>
+			</div>
+		</div>
+        <table id="result-table">
+                <tr class="table-header">
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Локальное время</th>
+                    <th>Время исполнения</th>
+                    <th>Попадание</th>
+                </tr>
+		</table>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+	</body>
+</html>
